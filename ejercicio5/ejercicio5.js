@@ -36,14 +36,14 @@ function iniciarSesion() {
     if (passwordCorrecto(password, login) == true) {
       window.alert("El nombre de usuario y la contraseña son correctos");
       break;
-    } else if (existeLogin(login) == false) {
-      window.alert("El nombre de usuario no existe");
-    } else if (
-      passwordCorrecto(login, password == false) &&
-      existeLogin(login) == true
-    ) {
-      window.alert("El nombre de usuario no coincide con la contraseña");
-    }
+    }// else if (existeLogin(login) == false) {
+    //   window.alert("El nombre de usuario no existe");
+    // } else if (
+    //   passwordCorrecto(login, password == false) &&
+    //   existeLogin(login) == true
+    // ) {
+    //   window.alert("El nombre de usuario no coincide con la contraseña");
+    // }
   }
 }
 
