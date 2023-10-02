@@ -16,7 +16,7 @@ function existeLogin(login) {
 function passwordCorrecto(password, login) {
   var valido = false;
 
-  for (var i = 0; 0 < USUARIOS.length; i++) {
+  for (var i = 0; i < USUARIOS.length; i++) {
     if (login == USUARIOS[i]) {
       if (password == CONTRASENAS[i]) {
         valido = true;
@@ -29,21 +29,21 @@ function passwordCorrecto(password, login) {
 }
 
 function iniciarSesion() {
-  for (var i = 0; i < 5; i++) {
+  for (var j = 0; j < 5; j++) {
     var login = prompt("Nombre de usuario");
     var password = prompt("Contraseña");
 
     if (passwordCorrecto(password, login) == true) {
       window.alert("El nombre de usuario y la contraseña son correctos");
       break;
-    }// else if (existeLogin(login) == false) {
-    //   window.alert("El nombre de usuario no existe");
-    // } else if (
-    //   passwordCorrecto(login, password == false) &&
-    //   existeLogin(login) == true
-    // ) {
-    //   window.alert("El nombre de usuario no coincide con la contraseña");
-    // }
+    } else if (existeLogin(login) == false) {
+      window.alert("El nombre de usuario no existe");
+    } else if (
+      passwordCorrecto(login, password) == false &&
+      existeLogin(login) == true
+    ) {
+      window.alert("El nombre de usuario no coincide con la contraseña");
+    }
   }
 }
 
